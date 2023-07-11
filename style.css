@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+#btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 160px;
+    border: 2px solid white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+    cursor: pointer;
+}
+
+#circle{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    display: grid;
+    place-content: center;
+}
+
+p{
+    font-size: 26px;
+}
+
+.opac{
+    animation: opacity 0.4s linear;
+}
+
+.animf{
+    animation: day 0.2s linear;
+    animation-fill-mode: forwards;
+}
+.animb{
+    animation: night 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes day {
+    100%{
+        transform: translateX(110px);
+        background-color: black;
+    }
+}
+@keyframes night {
+    0%{
+        margin-left: 110px;
+        background-color: black;
+    }
+    100%{
+        transform: translateX(0);
+        background-color: white;
+    }
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
